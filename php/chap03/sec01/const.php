@@ -20,5 +20,7 @@
 	define('-_-','small');
 	// const -_-='smali';   //错误
 
+	// 使用常量
+	echo PI;
  
  
