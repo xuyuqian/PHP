@@ -25,3 +25,11 @@
 
 	// echo -_-;    //特殊符号不能直接使用
 	echo constant('-_-');
+
+	// 系统常量
+	echo '<br/>',PHP_VERSION,'<br/>',PHP_INT_SIZE,'<br/>',PHP_INT_MAX;
+
+	// 魔术常量
+	echo '<hr/>';
+	echo __DIR__,'<br/>',__FILE__,'<br/>',__LINE__,'<br/>';
+	echo __LINE__;
