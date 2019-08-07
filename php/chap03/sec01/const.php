@@ -16,7 +16,7 @@
 	// 使用const关键字定义
 	const PII=3;
 
-	// 定义特使常量
+	// 定义特殊常量
 	define('-_-','small');
 	// const -_-='smali';   //错误
 
