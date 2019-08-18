@@ -114,4 +114,8 @@
     |   |   
     |   |-- sec07  --while
     |   |
+    |   |-- sec08  --数组相关函数
+    |   |     |-- array_sysfunc.php  --排序函数
+    |   |     |-- array_sysfunc1.php  --指针函数
+    |   |     |-- array_sysfunc2.php  --其他函数（栈、队列的演示）
 ```
