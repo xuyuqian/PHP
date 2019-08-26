@@ -86,3 +86,25 @@ alter table my_student drop nj;
 drop table class;
 show tables;
 drop table class2,my_student;
+
+# 插入数据到数据表
+create table my_teacher
+(
+    name varchar(10),
+    age  int
+);
+
+insert into my_teacher (name, age) values ('Jaca', 30);
+insert into my_teacher (age, name) values (40, 'Tom');
+insert into my_teacher (name) values ('Li');
+
+insert into my_teacher values ('Zhang',22);
+
+# 获取所有数据
+select * from my_teacher;
+
+# 获取指定字段数据
+select name from my_teacher;
+
+# 获取年龄为30岁的人的名字
+select name from my_teacher where age=30;
