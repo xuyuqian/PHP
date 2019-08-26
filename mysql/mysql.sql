@@ -108,3 +108,6 @@ select name from my_teacher;
 
 # 获取年龄为30岁的人的名字
 select name from my_teacher where age=30;
+
+# 查看系统保存的三种关系处理字符集
+show variables like 'character_set%';
