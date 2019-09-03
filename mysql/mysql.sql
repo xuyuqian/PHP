@@ -191,3 +191,36 @@ update my_date set d1='2000-01-01' where d5=2069;
 insert into my_date values ('1900-01-01','512:12:12','1900-01-01 12:12:12','1999-01-01 12:12:12',70);
 # 在进行时间类型录入的时候（time）还可以使用一个简单的日期代替时间，在时间格式之前加一个空格，然后指定一个数字（可以是负数），系统会自动将该数字转换成天数*24小时，再加上后面的时间
 insert into my_date values ('1900-01-01','5 12:12:12','1900-01-01 12:12:12','1999-01-01 12:12:12',70);
+
+# 创建表
+create table my_enum(
+    gender enum('男','女','保密')
+);
+
+desc my_enum;
+
+# 插入数据
+insert into my_enum values ('男');
+insert into my_enum values ('女');
+insert into my_enum values ('男');
+
+# enum字段存储的结果是数值
+# 将字段按照数值输出
+select gender + 0 from my_enum;
+
+insert into my_enum values (3);
+
+
+# 创建表
+create table my_set(
+    hobby set('篮球','足球','羽毛球','乒乓球','网球','橄榄球','冰球','跳高')
+);
+
+# 插入数据
+insert into my_set values ('篮球,乒乓球,足球');
+insert into my_set values ('橄榄球,跳高,篮球,乒乓球,足球');   # 排序顺序为创建表时的顺序
+
+# 查看数据:以数值方式查看
+select hobby + 0 from my_set;
+
+insert into my_set values (255);
