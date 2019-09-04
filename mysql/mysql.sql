@@ -340,3 +340,17 @@ create table my_unique3(
 alter table my_unique3 add unique key (usernmae);
 
 
+# 查看唯一键
+desc my_unique1;
+
+# 唯一键效果
+insert into my_unique1 values (null,default);
+insert into my_unique1 values (null,default);
+insert into my_unique1 values (null,default);
+
+insert into my_unique1 values (null,'army');
+insert into my_unique1 values (null,'army');  # 非空不允许重复
+
+# 删除唯一键
+alter table my_unique2 drop index usernmae;
+
