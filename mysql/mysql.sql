@@ -321,3 +321,22 @@ insert into my_auto values (20,'Jack','123456');  # 用户指定数据之后，�
 alter table my_auto auto_increment=10;   # 结果无法修改
 
 
+# 创建表，唯一键
+create table my_unique1(
+                           id int primary key auto_increment,
+                           usernmae varchar(10) unique
+);
+
+create table my_unique2(
+                           id int primary key auto_increment,
+                           usernmae varchar(10),
+                           unique key (usernmae)
+);
+
+create table my_unique3(
+                           id int primary key auto_increment,
+                           usernmae varchar(10)
+);
+alter table my_unique3 add unique key (usernmae);
+
+
