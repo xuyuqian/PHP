@@ -391,3 +391,18 @@ insert into my_simple values ('a'),('b'),('c'),('d');
 
 # 蠕虫复制
 insert into my_simple (name) select name from my_simple;
+
+# 更新数据
+update my_simple set name='e' where name='a' limit 2;
+
+select * from my_auto;
+# 删除整个表的数据
+delete from my_auto;
+
+# 插入数据
+insert into my_auto values (null,'ceshi','123456');  # auto_increment是无法进行重置的
+
+# 重置表选项中的自增长
+truncate my_auto;
+# 插入数据
+insert into my_auto values (null,'ceshi','123456');  # auto_increment是无法进行重置的
